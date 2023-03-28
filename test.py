@@ -1,3 +1,3 @@
 
-with open('work_log.txt', 'a') as file:
-    file.writelines('26.03.2023')
+with open('work_log.txt', 'a') as file1:
+    file1.writelines('\n28.03')

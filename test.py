@@ -1,3 +1,11 @@
+import pandas as pd
 
-with open('work_log.txt', 'a') as file1:
-    file1.writelines('\n28.03')
+data_dict = {
+    'website': [],
+    'email_username': [],
+    'password': []
+}
+
+data = pd.DataFrame(data_dict)
+
+data.to_csv('./save_data/save_data.csv')

@@ -43,5 +43,4 @@ def generate_password():
     return rezultat
 
 
-generare_pass = generate_password()
-print(generare_pass)
+

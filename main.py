@@ -1,5 +1,6 @@
 from tkinter import *
 from generate_pass import generate_password
+from tkinter import messagebox
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -13,16 +14,20 @@ def pass_gen():
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 # Creearea functiei pt salvare date
 def add_data():
-    website_res = website_box.get()
-    email_username_res = e_u_box.get()
-    password_res = password_box.get()
 
     # Erori (nu completeaza in fiecare boxa (Entry) conform cerintelor
-    if len(website_res) < 1 or len(email_username_res) < 1 or len(password_res) < 3:
+    if len(website_box.get()) < 1 or len(e_u_box.get()) < 1 or len(password_box.get()) < 3:
         eroare(True)
-    elif len(website_res) >= 1 and len(email_username_res) >= 1 and len(password_res) >= 3:
-        with open('./save_data/save_data.txt', 'a') as file:
-            file.writelines(f'website: {website_res} | user/email: {email_username_res} | password: {password_res}\n')
+    elif len(website_box.get()) >= 1 and len(e_u_box.get()) >= 1 and len(password_box.get()) >= 3:
+        intrebare = messagebox.askquestion(title='Salvare date', message='Doresti sa salvezi datele?')
+        if intrebare == 'yes':
+            with open('./save_data/save_data.txt', 'a') as file:
+                file.writelines(f'{website_box.get()} | {e_u_box.get()} | {password_box.get()}\n')
+            messagebox.showinfo(message='Datele au fost salvate cu succes!')
+            website_box.delete(0, END)
+            password_box.delete(0, END)
+        else:
+            pass
 
 # Creearea functiilor remediere conform cerintelor din fiecare boxa
 
@@ -67,8 +72,10 @@ label_password.grid(column=0, row=3, pady=3)
 # Column 1
 website_box = Entry(width=38)
 website_box.grid(column=1, row=1, columnspan=2)
+website_box.focus()
 e_u_box = Entry(width=38)
 e_u_box.grid(column=1, row=2, columnspan=2)
+e_u_box.insert(index=0, string='test@test.ro')
 password_box = Entry(width=21)
 password_box.grid(column=1, row=3)
 add_butt = Button(text='Add', width=36, command=add_data)

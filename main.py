@@ -94,7 +94,7 @@ add_butt.grid(column=1, row=4, columnspan=2, pady=3)
 gen_pass_butt = Button(text='Generate Password', width=13, command=pass_gen)
 gen_pass_butt.grid(column=2, row=3, pady=3)
 
-search_butt = Button(text='Search', width=10, command=butt_search)
+search_butt = Button(text='Search', width=13, command=butt_search)
 search_butt.grid(column=2, row=1, pady=1)
 
 window.mainloop()

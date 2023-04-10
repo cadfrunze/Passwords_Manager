@@ -1,3 +1,1 @@
-website: test | email: test@test.ro | password: 0)5Z5-]eFvGlx
-website: 1 | email: test@test.ro | password: vX~9zh
-website: bla.ro | email: test@test.ro | password: 111
+website: amazon | email: test@test.ro | password: PkF0}2j<}

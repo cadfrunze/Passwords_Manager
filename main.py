@@ -9,6 +9,7 @@ import time
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 # Creearea functiei generare password
 def pass_gen():
+    """Functie generare password button"""
     password_generator = generate_password()
     password_box.delete(0, END)
     password_box.insert(0, password_generator)
@@ -17,6 +18,7 @@ def pass_gen():
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 # Creearea functiei pt salvare date
 def add_data():
+    """Functie buton 'add'"""
     # Erori (nu completeaza in fiecare boxa (Entry) conform cerintelor
     if len(website_box.get()) < 1 or len(e_u_box.get()) < 1 or len(password_box.get()) < 3:
         eroare(True)
@@ -28,6 +30,7 @@ def add_data():
 
 # Creearea functiilor remediere conform cerintelor din fiecare boxa
 def butt_search():
+    """Functie butonul 'search'"""
     if len(website_box.get()) < 1:
         website_box.config(bg='red')
         messagebox.showinfo('Eroare', message='Te rog introdu in casuta \'Website\' un element')
@@ -38,6 +41,7 @@ def butt_search():
 
 
 def eroare(boolean):
+    """Verificare date, conform cerintelor"""
     if len(website_box.get()) < 1 or len(website_box.get()) > 24:
         website_box.config(bg='red')
     else:

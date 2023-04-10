@@ -3,6 +3,7 @@ from tkinter import messagebox
 
 
 def search_fun(obiect: str):
+    """Functie pt butonul search"""
     try:
         file = open('./save_data/data.json', 'r')
         file.close()

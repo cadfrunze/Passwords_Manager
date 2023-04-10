@@ -6,5 +6,9 @@
     "1": {
         "email": "test@test.ro",
         "password": "vX~9zh"
+    },
+    "bla.ro": {
+        "email": "test@test.ro",
+        "password": "111"
     }
 }

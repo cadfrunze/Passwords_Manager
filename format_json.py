@@ -3,6 +3,9 @@ from tkinter import messagebox
 
 
 def fun_format_json_txt(website, email, password):
+    """Functie pt salvare date in format .json si .txt
+    Atentie! are functionalitate si pt a verifica daca a mai fost adaugat aceleasi
+    date in boxa 'website'"""
     data = {website: {
         'email': email,
         'password': password

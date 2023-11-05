@@ -37,7 +37,7 @@ def butt_search():
         search_fun(obiect=website_box.get())
 
 
-def eroare(boolean):
+def eroare(boolean: bool):
     if len(website_box.get()) < 1 or len(website_box.get()) > 24:
         website_box.config(bg='red')
     else:

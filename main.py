@@ -59,6 +59,7 @@ def eroare(boolean: bool):
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
+window.resizable(False,False)
 window.title(string='Password Manager')
 window.config(padx=50, pady=50)
 canvas = Canvas(width=200, height=200)

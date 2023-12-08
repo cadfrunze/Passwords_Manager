@@ -6,5 +6,13 @@
     "test1": {
         "email": "test@test.ro",
         "password": "F8eK&i(5"
+    },
+    "yahoo.ro": {
+        "email": "test@test.ro",
+        "password": "C3/^2Gm"
+    },
+    "ffdfsgf": {
+        "email": "fgdffgd",
+        "password": "3=SI1$(aw%0"
     }
 }
